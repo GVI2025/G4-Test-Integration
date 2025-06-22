@@ -18,7 +18,7 @@ pytest = ">=8.3.5,<9.0.0"
 httpx = ">=0.28.1,<0.29.0"
 pydantic = {extras = ["email"], version = "^2.11.5"}
 apscheduler = "^3.11.0"
-exceptiongroup
+exceptiongroup>=1
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
