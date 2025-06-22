@@ -7,7 +7,7 @@ on:
 
 jobs:
   install:
-    name: Installation des dépendances
+    name: Lancement des tests d'intégration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code (lets the action access the repository)
@@ -24,12 +24,6 @@ jobs:
         run: |
           poetry lock
           poetry install
-  test:
-    name: Lancement des tests d'intégration
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run tests
-      run: |
-        poetry run test
-      
+      - name: Run tests
+        run: |
+          poetry run test
