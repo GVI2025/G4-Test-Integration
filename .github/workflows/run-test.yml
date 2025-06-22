@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    name: Lancement des tests d'intégration
+  install:
+    name: Installation des dépendances
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code (lets the action access the repository)
@@ -24,6 +24,12 @@ jobs:
         run: |
           poetry lock
           poetry install
-      - name: Run tests
-        run: |
-          poetry run test
+  test:
+    name: Lancement des tests d'intégration
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run tests
+      run: |
+        poetry run test
+      
