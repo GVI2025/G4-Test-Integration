@@ -1,25 +1,26 @@
-# SimpleWMS
+# G4 Integration Test
 
-A simple Warehouse Management System (WMS) WebAPI REST application built with FastAPI and SQLAlchemy.
+A simple Room Management System WebAPI REST application built with FastAPI and SQLAlchemy.
+It is forked from [SimpleWMS](https://github.com/GVI2025/SimpleWMS#), for a different database structure.
+An additional module of **Integration Testing** is implemented!
 
-## 🧱 Features
+## ✨ Features
 
-* Product and stock management (articles, emplacements, implantations)
-* Inbound flows (receptions)
-* Outbound flows (commandes, lignes de commande)
-* Operations and tasks (missions)
-* Agent tracking
+* Room management (name, location)
+* Reservation management (date & time, reserved room)
 
-## 🚀 Getting Started
+## 🚢 Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-org/simplewms.git
-cd simplewms
+git clone https://github.com/GVI2025/G4-Test-Integration.git
+cd G4-Test-Integration
 ```
 
 ### 2. Install Poetry (if not already installed)
+
+You can find the official documentation [here](https://python-poetry.org/docs/).
 
 ```bash
 curl -sSL https://install.python-poetry.org | python3 -
@@ -40,7 +41,7 @@ poetry install
 ### 4. Activate the virtual environment
 
 ```bash
-poetry shell
+poetry env activate
 ```
 
 ### 5. Set up the database

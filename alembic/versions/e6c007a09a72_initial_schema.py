@@ -26,6 +26,7 @@ def upgrade() -> None:
     sa.Column('nom', sa.String(), nullable=False),
     sa.Column('capacité', sa.Integer(), nullable=False),
     sa.Column('localisation', sa.String(), nullable=True),
+    sa.Column('disponible', sa.Boolean(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('nom')
     )
@@ -35,6 +36,7 @@ def upgrade() -> None:
     sa.Column('date', sa.Date(), nullable=False),
     sa.Column('heure', sa.Time(), nullable=False),
     sa.Column('utilisateur', sa.String(), nullable=False),
+    sa.Column('commentaire', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('id'),
     sa.ForeignKeyConstraint(['salle_id'], ['salle.id'], ondelete='CASCADE'),
     sa.UniqueConstraint('salle_id', 'date', 'heure')
