@@ -11,7 +11,7 @@ client = TestClient(app)
 mock_salle_data = {
     "id": "test_id",
     "nom": "Test Salle",
-    "capacité": 100,
+    "capacité": 200,
     "localisation": "Test Localisation",
     "disponible": True,
 }
